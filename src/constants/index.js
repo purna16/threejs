@@ -21,9 +21,6 @@ import {
   kubernetes,
   ts,
   apis,
-  Kube,
-  python,
-  java,
 } from "../assets";
 
 export const navLinks = [
@@ -101,54 +98,20 @@ const technologies = [
     name: "docker",
     icon: docker,
   },
-  {
-    name: "Kubernetes",
-    icon: Kube,
-  },
-  {
-    name: "Python",
-    icon: python,
-  },
 ];
 
 const experiences = [
   {
-    title: "IT Support Specialist",
-    company_name: "Penn State Berks",
-    icon: starbucks,
-    iconBg: "#383E56",
-    date: "Nov 2021 - Dec 2022",
-    points: [
-      "Identifying technical failures by charting the issues faced by students and faculty.",
-      "Conducting a solution-oriented procedure to eliminate outlined failures.",
-      "Helped instructors establish secure routes to Penn State Network",
-      "Killing, wiping hard drives, reimaging, and updating AIO systems.",
-    ],
-  },
-  {
-    title: "Intercultural Mentor",
-    company_name: "Penn State Berks",
-    icon: starbucks,
-    iconBg: "#E6DEDD",
-    date: "April 2022 - Dec 2022",
-    points: [
-      "Assimilation of international student body by minimizing culture shock.",
-      "Tracking and curating resources for diversification and utilization of international potential.",
-      "Organise events to increase inclusivity to Penn State Community.",
-      "Helped students belong in a predominantly white institution(PWI).",
-    ],
-  },
-  {
-    title: "Full stack Developer",
+    title: "DevOps Engineer",
     company_name: "IIT Bombay",
     icon: meta,
     iconBg: "#E6DEDD",
     date: "May 2023 - Present",
     points: [
-      "Developing and maintaining frontend web applications using Next.js and GitLab CI/CD.",
-      "Developing and maintaining backend web applications using Django, Django Rest Framework and GitLab CI/CD.",
-      "Resolved CORS (Continuously Operating Reference Stations) errors.",
-      "My first time working with a full development team and DevOps",
+      "Create a CI/CD pipeline for a Java application and deploy it on Kubernetes.",
+      "Perform load testing on the deployed application using JMeter.",
+      "Configure RBAC to grant different users permissions for deploying in Kubernetes.",
+      "Set up pipelines for Python and Node.js applications and deploy them.",
     ],
   },
 ];
@@ -182,135 +145,68 @@ const testimonials = [
 
 const projects = [
   {
-    name: "JBOD Manipulation using C.",
+    name: "Streamlining Application Deployments with GitLab and Kubernetes.",
     description:
-      "Write a program in C to iterate through a 1MB JBOD split into disks and blocks and copy the data into a user provided buffer.",
+      "I implemented an end-to-end CI/CD pipeline using GitLab for a Node.js Microservice.",
     tags: [
       {
-        name: "C",
+        name: "gitlab",
         color: "gray-text-gradient",
       },
       {
-        name: "Linux",
+        name: "node.js",
         color: "green-text-gradient",
       },
       {
-        name: "makefile",
+        name: "kubernetes",
         color: "pink-text-gradient",
       },
     ],
     image: carrent,
-    source_code_link: "https://github.com/UDogg/CMPSC311",
+    source_code_link: "https://gitlab.com/shivar640/node-js",
   },
   {
-    name: "Whack-A-Mole",
+    name: "CICD Pipeline for Java Application",
     description:
-      "Write a program in Python to create a basic Whack-A-Mole game including GUI using pip and pygame packages.",
+      "Developed and implemented CI/CD pipeline with Jenkins for Java app on EKS cluster.",
     tags: [
       {
-        name: "Python",
+        name: "Eks",
         color: "blue-text-gradient",
       },
       {
-        name: "pygame",
+        name: "AWS",
         color: "green-text-gradient",
       },
       {
-        name: "random",
+        name: "Nexus",
         color: "pink-text-gradient",
       },
     ],
     image: jobit,
-    source_code_link: "https://github.com/UDogg/Whack-A-Mole",
+    source_code_link: "https://github.com/purna16/Jenkins-CICD",
   },
   {
-    name: "Django CRM",
+    name: "Deployed Website on AWS Using Python",
     description:
-      "This is a high level customer relationship manager created using Django",
+      "Designed and implemented scalable cloud-based solution using AWS for employee management app.",
     tags: [
       {
-        name: "Python",
+        name: "AWS",
         color: "blue-text-gradient",
       },
       {
-        name: "Django",
+        name: "Python",
         color: "green-text-gradient",
       },
       {
-        name: "html",
+        name: "Dynamodb",
         color: "pink-text-gradient",
       },
     ],
     image: tripguide,
-    source_code_link: "https://github.com/UDogg/djanproj",
-  },
-  {
-    name: "Kubernetes Deployment",
-    description:
-      "This 3D website was deployed using Kubernetes",
-    tags: [
-      {
-        name: "Python",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Django",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Kubernetes",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: kubernetes,
-    source_code_link: "https://github.com/UDogg/threejs",
-  },
-  {
-    name: "Learning Prisma",
-    description:
-      "This is made using TypeScript and Prisma",
-    tags: [
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Prisma",
-        color: "green-text-gradient",
-      },
-      {
-        name: "MySQL",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: ts,
-    source_code_link: "https://github.com/UDogg/Prisma",
-  },
-  {
-    name: "qApply backend(testing) and frontend",
-    description:
-      "I learned how to use Django Rest Framework and Test-Driven-Development concepts.I also learned how to catch APIs, resolve CORS errors and dynamically call APIs using Next.js",
-    tags: [
-      {
-        name: "TypeScript",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "Python",
-        color: "green-text-gradient",
-      },
-      {
-        name: "Django",
-        color: "pink-text-gradient",
-      },
-      {
-        name: "Next.js",
-        color: "red-text-gradient",
-      },
-    ],
-    image: apis,
-    source_code_link: "https://github.com/UDogg/qapply-frontend",
-  },
+    source_code_link: "https://github.com/purna16/Voting-Webapp",
+  }, 
 ];
 
 export { services, technologies, experiences, testimonials, projects };
